@@ -32,6 +32,7 @@ precedence left OR, AND, NOT;
 precedence left IGUAL, DIFERENTE, MENORQUE, MAYORQUE,MAYORIGUAL, MENORIGUAL;
 precedence left MAS, MENOS;
 precedence left MULT, DIV; 
+
 precedence right POT; 
 
 
