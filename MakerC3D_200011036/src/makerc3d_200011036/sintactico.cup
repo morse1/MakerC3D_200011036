@@ -8,12 +8,12 @@ parser code
 {://Codigo visible
 
     public void syntax_error(Symbol s){
-        System.err.println(s);
+        System.err.println("Error Sintactico: " + s);
     }
 
     public void unrecovered_syntax_error(Symbol s) throws java.lang.Exception{ 
         System.err.println("T.T");
-        System.err.println(s);
+        System.err.println("Error: " + s);
     }
 
 :}
@@ -50,6 +50,8 @@ expresion   ::= expresion:izq MAS expresion:der
                         ControlC3D.agregarC3D(c3d);
                         RESULT = new NodoC3D(temp); 
                     :}
+            |   error
+                    {:System.out.println("error sintactico");:}
             |   expresion:izq MENOS expresion:der
                     {: 
                         String temp = ControlC3D.generaTemp();
